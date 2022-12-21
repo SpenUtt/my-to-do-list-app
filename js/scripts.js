@@ -1,6 +1,6 @@
 function newItem(){
-//1. adding a new to do list item
 
+//1. adding a new to do list item
     let list = $('#list');
     let li = $('<li></li>');
     let userInput = $('#input');
@@ -9,6 +9,7 @@ function newItem(){
 
     if (!inputValue) {
         alert('You must write something!');
+    
     } else {
         list.append(li);
         userInput.val('');
@@ -18,6 +19,7 @@ function newItem(){
     function crossOut() {
         li.toggleClass('strike');
     }
+    
     li.on('dblclick', crossOut);
 
 //3.1. adding the delete button "X":
@@ -29,6 +31,7 @@ function newItem(){
     function deleteListItem() {
         li.addClass('delete');
     }
+    
     crossOutButton.on('click', deleteListItem);
 
 //4. reordering the items: 
